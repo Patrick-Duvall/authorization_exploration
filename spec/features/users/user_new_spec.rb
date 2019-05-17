@@ -21,14 +21,3 @@ describe "as a visitor" do
     end
   end
 end
-
-
-
-
-# As a Visitor
-# When I visit the user index
-# And click on 'Register as User'
-# I am taken to a new user form
-# When I fill out that form and click 'Create User'
-# I am redirected back to user index
-# And see the new user
