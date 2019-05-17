@@ -14,7 +14,7 @@ describe "as a visitor" do
 
       expect(current_path).to eq(users_path)
       expect(page).to have_content("Welcome #{user_1.name}, you are logged in!")
-
+      expect(page).to_not have_link("Log In")
     end
   end
 end

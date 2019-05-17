@@ -6,16 +6,15 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by(email: params[:email], password: params[:password])
-    require 'pry'; binding.pry
 
     if @user == nil
       redirect_to login_path
       return
     else
-
+      session[:user_id] = @user.id
+      redirect_to users_path
     end
 
-    redirect_to users_path
   end
 
 
