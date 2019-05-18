@@ -22,5 +22,6 @@ describe "as a valid user that visits secret path" do
     visit secret_path
 
     expect(current_path).to eq(secret_path)
+    expect(page).to have_content("Secret Page")
   end
 end
